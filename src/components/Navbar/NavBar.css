@@ -1,0 +1,19 @@
+#nav li {
+    margin: 0px 10px;
+}
+
+#nav li a {
+    color: grey;
+}
+
+
+#nav li button {
+    color: grey;
+    margin-top: 5px;
+    border: none;
+    background-color: white;
+}
+
+nav section a img {
+    width: 80px;
+}
