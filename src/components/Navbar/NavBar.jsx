@@ -21,12 +21,12 @@ export default function NavBar() {
                         <li className="nav-item dropdown me-auto">
                             <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorias</a>
                             <ul className="dropdown-menu">
-                                <li><Link to="category/Human" className="dropdown-item">Human</Link></li>
-                                <li><Link to="category/Alien" className="dropdown-item">Alien</Link></li>
-                                <li><Link to="category/Male" className="dropdown-item">Male</Link></li>
-                                <li><Link to="category/Female" className="dropdown-item">Female</Link></li>
-                                <li><Link to="category/Alive" className="dropdown-item">Alive</Link></li>
-                                <li><Link to="category/Dead" className="dropdown-item">Dead</Link></li>
+                                <li><Link to="/category/Human" className="dropdown-item">Human</Link></li>
+                                <li><Link to="/category/Alien" className="dropdown-item">Alien</Link></li>
+                                <li><Link to="/category/Male" className="dropdown-item">Male</Link></li>
+                                <li><Link to="/category/Female" className="dropdown-item">Female</Link></li>
+                                <li><Link to="/category/Alive" className="dropdown-item">Alive</Link></li>
+                                <li><Link to="/category/Dead" className="dropdown-item">Dead</Link></li>
                         </ul>
                     </li>
                     <li>
