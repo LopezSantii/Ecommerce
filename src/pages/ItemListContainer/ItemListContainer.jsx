@@ -25,7 +25,8 @@ export default function ItemListContainer() {
     useEffect(() => {
         Products()
             .then(productsData => {
-                setProducts(filterCharactersByPropertyValue(productsData, id));
+                const category = id === undefined ? productsData : filterCharactersByPropertyValue(productsData, id)
+                setProducts(category);
             })
             .catch();
     }, [id])
