@@ -1,11 +1,14 @@
-import ItemList from "../../components/ItemList";
+import ItemList from "../../components/ItemList/ItemList";
 import { useState, useEffect } from "react";
-import { Products } from "../../services/service.js";
+// import { Products } from "../../services/service.js";
 import { useParams } from "react-router-dom";
+import {collection, getDocs, getFirestore} from "firebase/firestore"
 
 export default function ItemListContainer() {
     const [products, setProducts] = useState([]);
     const { id } = useParams()
+
+
 
     function filterCharactersByPropertyValue(characters, propertyValue) {
         const filteredCharacters = characters.filter(character => {
@@ -23,13 +26,24 @@ export default function ItemListContainer() {
     }
 
     useEffect(() => {
-        Products()
-            .then(productsData => {
-                const category = id === undefined ? productsData : filterCharactersByPropertyValue(productsData, id)
-                setProducts(category);
-            })
-            .catch();
-    }, [id])
+        const db = getFirestore();
+
+        const itemCollection = collection(db, "items");
+
+        getDocs(itemCollection).then((snapshot) => {
+            const itemsFromSnapshot = snapshot.docs.map((doc) => ({
+                id: doc.id,
+                ...doc.data(),
+            }))
+            setProducts(itemsFromSnapshot)
+        })
+        // Products()
+        //     .then(productsData => {
+        //         const category = id === undefined ? productsData : filterCharactersByPropertyValue(productsData, id)
+        //         setProducts(category);
+        //     })
+        //     .catch();
+    }, [])
         
         return (
             <section className="container row mx-auto">

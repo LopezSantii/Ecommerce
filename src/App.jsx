@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route } from "react-router-dom"
 import NavBar from "./components/Navbar/Navbar"
 import ItemListContainer from "./pages/ItemListContainer/ItemListContainer"
 import ItemDitail from './pages/ItemDitail/ItemDetail'

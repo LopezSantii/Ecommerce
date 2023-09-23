@@ -1,7 +1,6 @@
 import logo from "../../assets/logo.png"
 import CartWidget from "../CartWidget/CartWidget"
 import "./NavBar.css"
-import Seaarch from "../Search/Search"
 import { Link } from "react-router-dom";
 
 export default function NavBar() {
@@ -15,24 +14,15 @@ export default function NavBar() {
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
             </button>
-                <Seaarch/>
                 <div className="mt-2 collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul id="nav" className="navbar-nav ms-auto mb-lg-0">
-                        <li className="nav-item dropdown me-auto">
-                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorias</a>
-                            <ul className="dropdown-menu">
-                                <li><Link to="/category/Human" className="dropdown-item">Human</Link></li>
-                                <li><Link to="/category/Alien" className="dropdown-item">Alien</Link></li>
-                                <li><Link to="/category/Male" className="dropdown-item">Male</Link></li>
-                                <li><Link to="/category/Female" className="dropdown-item">Female</Link></li>
-                                <li><Link to="/category/Alive" className="dropdown-item">Alive</Link></li>
-                                <li><Link to="/category/Dead" className="dropdown-item">Dead</Link></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <CartWidget />
-                    </li>
-                </ul>
+                    <ul id="nav" className="navbar-nav ms-auto mx-auto  mb-lg-0">
+                        <li className="nav-item"><Link className="nav-link" to="/category/Jordan 1">Jordan 1</Link></li>
+                        <li className="nav-item"><Link className="nav-link"  to="/category/Jordan 4">Jordan 4</Link></li>
+                        <li className="nav-item"><Link className="nav-link"  to="/category/Dunk Low">Dunk Low</Link></li>
+                        <li className="nav-item"><Link className="nav-link"  to="/category/Dunk Hight">Dunk Hight</Link></li>
+                        <li className="nav-item"><Link className="nav-link"  to="/category/Air Force">Air Force</Link></li>
+                    </ul>
+                <CartWidget />
             </div>
         </section>
         </nav>
