@@ -12,3 +12,11 @@
     color: white;
     background-color: grey;
 }
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 82vh;
+    flex-direction: column;
+}

@@ -16,6 +16,7 @@ export default function NavBar() {
             </button>
                 <div className="mt-2 collapse navbar-collapse" id="navbarSupportedContent">
                     <ul id="nav" className="navbar-nav ms-auto mx-auto  mb-lg-0">
+                        <li className="nav-item"><Link className="nav-link" to="/category/Todos">Todos</Link></li>
                         <li className="nav-item"><Link className="nav-link" to="/category/Jordan 1">Jordan 1</Link></li>
                         <li className="nav-item"><Link className="nav-link"  to="/category/Jordan 4">Jordan 4</Link></li>
                         <li className="nav-item"><Link className="nav-link"  to="/category/Dunk Low">Dunk Low</Link></li>

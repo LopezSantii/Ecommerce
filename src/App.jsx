@@ -3,6 +3,7 @@ import NavBar from "./components/Navbar/Navbar"
 import ItemListContainer from "./pages/ItemListContainer/ItemListContainer"
 import ItemDitail from './pages/ItemDitail/ItemDetail'
 import Error404 from './pages/Error404/Error404'
+import Footer from "./components/Footer/Footer"
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Route path='/item/:id' element={<ItemDitail />} />
         <Route path='*' element={<Error404 />} />
       </Routes>
+      <Footer/>
     </>
   )
 }

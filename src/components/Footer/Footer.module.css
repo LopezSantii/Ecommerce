@@ -1,0 +1,24 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+footer p {
+    margin: 25px;
+    color: black;
+}
+
+footer section {
+    margin: 0px 25px;
+}
+
+footer section a {
+    text-decoration: none;
+    margin: 10px;
+}
+
+footer section a svg {
+    color: black;
+}

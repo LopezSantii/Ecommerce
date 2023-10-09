@@ -2,29 +2,34 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { collection, getDocs, getFirestore } from "firebase/firestore"
 import style from "./ItemDetail.module.css"
-// import { Products } from "../../services/service";
+import Loader from "../../components/Loader/Loader";
 
 export default function ItemDitail() {
     const { id } = useParams()
     const [product, setProduct] = useState(null)
+    const [loading, setLoading] = useState(true)
     
     useEffect(() => {
         const db = getFirestore();
-
         const itemCollection = collection(db, "items");
 
-        getDocs(itemCollection).then((snapshot) => {
+        getDocs(itemCollection)
+            .then((snapshot) => {
             const itemsFromSnapshot = snapshot.docs.map((doc) => ({
                 id: doc.id,
                 ...doc.data(),
             }))
             setProduct(itemsFromSnapshot.find(product => product.id === id))
-        })
+            })
+            .finally(() => { setLoading(false) })
     }, [])
     
     return (
-        <>
-            {product && (
+        loading ?
+            (<main className="col-md-12 d-flex align-items-center justify-content-center">
+                <Loader/>
+            </main>)
+            : (product && (
                 <main className={`container-fluid ${style.bg_snk}`}>
                     {/* Carousel Mobile */}
                     <div id="carouselExample" className="d-block d-md-none carousel slide carousel-dark">
@@ -70,7 +75,6 @@ export default function ItemDitail() {
                     </div>
                     </section>
                 </main>
-            )}
-        </>
+            )) 
     )
     }
