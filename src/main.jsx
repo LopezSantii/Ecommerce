@@ -5,6 +5,7 @@ import App from './App.jsx'
 import { initializeApp } from "firebase/app";
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.min.js"
+import { CartProvider } from './context/CartContext.jsx';
 
 const firebaseConfig = {
   apiKey: "AIzaSyB0iPJEBrI_Vu4kH3zuhEDetx3n0JarIng",
@@ -20,7 +21,9 @@ initializeApp(firebaseConfig);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <CartProvider>
+        <App />
+      </CartProvider>
     </BrowserRouter>
   </React.StrictMode>,
 )
