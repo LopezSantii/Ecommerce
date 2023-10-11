@@ -1,4 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
+import Toastify from 'toastify-js'
+import "toastify-js/src/toastify.css"
 
 // Crea el contexto del carrito
 const CartContext = createContext();
@@ -7,8 +9,39 @@ export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
 
   // Agregar un producto al carrito
-  const addToCart = (product) => {
-    setCart([...cart, product]);
+  const addToCart = (product, quantity) => {
+    
+    const productInCart = cart.find((item) => item.id === product.id);
+
+    if (productInCart) {
+      const newCart = cart.map((item) => {
+        if (item.id === product.id) {
+          return {
+            ...item,
+            quantity: item.quantity + quantity,
+          }
+        }
+        return item;
+      })
+      setCart(newCart)
+    } else {
+      setCart([...cart, {...product, quantity}]);
+    }
+
+    Toastify({
+      text: "Producto agregado",
+      duration: 800,
+      newWindow: true,
+      close: true,
+      gravity: "top",
+      position: "right",
+      stopOnFocus: true,
+      style: {
+        background: "black",
+      },
+    }).showToast();
+
+    console.log(cart);
   };
 
   // Eliminar un producto del carrito

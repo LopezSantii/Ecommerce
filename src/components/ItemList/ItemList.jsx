@@ -1,27 +1,7 @@
 import { Link } from "react-router-dom"
 import style from "./ItemList.module.css"
-import { useCart } from "../../context/CartContext";
-import Toastify from 'toastify-js'
-import "toastify-js/src/toastify.css"
 
-export default function ItemList({ products }) {
-    const { addToCart } = useCart();
-
-  const handleAddToCart = () => {
-      addToCart(products);
-      Toastify({
-                    text: "Producto agregado",
-                    duration: 800,
-                    newWindow: true,
-                    close: true,
-                    gravity: "top",
-                    position: "right",
-                    stopOnFocus: true,
-                    style: {
-                        background: "black",
-                    },
-                }).showToast();
-    };
+export default function ItemList({ products, addToCart }) {
 
     return (
         <div className="col-lg-4 col-md-6 mt-5" >
@@ -32,7 +12,7 @@ export default function ItemList({ products }) {
                     <p className="w-100">{products.title}</p>
                     <p className="w-100">${products.price}</p>
                 </div>
-                <button onClick={handleAddToCart} className={`${style.button}`}>Agregar al carrito</button>
+                <button onClick={()=>addToCart(products,1)} className={`${style.button}`}>Agregar al carrito</button>
         </div>
     )
 }

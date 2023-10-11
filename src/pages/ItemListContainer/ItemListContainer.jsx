@@ -3,11 +3,13 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { collection, getDocs, getFirestore } from "firebase/firestore"
 import Loader from "../../components/Loader/Loader";
+import { useCart } from "../../context/CartContext";
 
 export default function ItemListContainer() {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true)
     const { id } = useParams()
+    const { addToCart } = useCart();
 
     useEffect(() => {
         const db = getFirestore();
@@ -35,7 +37,7 @@ export default function ItemListContainer() {
                 <h1 className="mt-5 text-center py-4">ÚLTIMOS LANZAMIENTOS</h1>
                 <section className="container row mx-auto">
                 {products.map((product) => (
-                    <ItemList products={product} key={product.id} />
+                    <ItemList addToCart={addToCart} products={product} key={product.id} />
                     ))}
                 </section>
             </main>)
