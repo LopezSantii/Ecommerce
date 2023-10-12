@@ -4,13 +4,12 @@ import Modal from 'react-bootstrap/Modal';
 import CartItem from "../CartItem/CartItem";
 import { useCart } from "../../context/CartContext";
 
-function Example() {
+function CartDetail() {
 
     // se usa el context para poder abrir el modal en cualquier page
-    const {isModalOpen, openModal, closeModal} = useModal()
+    const {isModalOpen, closeModal} = useModal()
     const handleClose = () => closeModal();
-    const handleShow = () => openModal();
-    const {cart} = useCart()
+    const { cart ,removeFromCart} = useCart()
 
   return (
     <>
@@ -21,14 +20,11 @@ function Example() {
               <Modal.Body>
                   <section>
                     {cart.map((cart) => (
-                    <CartItem products={cart} key={cart.id} />
+                    <CartItem removeFromCart={removeFromCart} products={cart} key={cart.id} />
                     ))}
                   </section>
               </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
           <Button variant="primary" onClick={handleClose}>
             Save Changes
           </Button>
@@ -38,4 +34,4 @@ function Example() {
   );
 }
 
-export default Example;
+export default CartDetail;

@@ -40,14 +40,25 @@ export function CartProvider({ children }) {
         background: "black",
       },
     }).showToast();
-
-    console.log(cart);
   };
 
   // Eliminar un producto del carrito
   const removeFromCart = (productId) => {
     const updatedCart = cart.filter((product) => product.id !== productId);
     setCart(updatedCart);
+
+        Toastify({
+        text: "Producto eliminado",
+        duration: 800,
+        newWindow: true,
+        close: true,
+        gravity: "top",
+        position: "right",
+        stopOnFocus: true,
+        style: {
+          background: "black",
+        },
+      }).showToast();
   };
 
   // Limpiar el carrito

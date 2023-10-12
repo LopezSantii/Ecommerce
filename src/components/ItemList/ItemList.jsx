@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import style from "./ItemList.module.css"
+import Button from "../Button.jsx/Button"
 
 export default function ItemList({ products, addToCart }) {
 
@@ -11,8 +11,8 @@ export default function ItemList({ products, addToCart }) {
                 <div className="my-3">
                     <p className="w-100">{products.title}</p>
                     <p className="w-100">${products.price}</p>
-                </div>
-                <button onClick={()=>addToCart(products,1)} className={`${style.button}`}>Agregar al carrito</button>
+            </div>
+            <Button funcion={()=>addToCart(products,1)} content={"Agregar al carrito"}/>
         </div>
     )
 }
