@@ -61,13 +61,18 @@ export function CartProvider({ children }) {
       }).showToast();
   };
 
+  // Precio total del carrito
+  const total = () => {
+    return cart.reduce((acc, item) => acc + (item.quantity * item.price), 0)
+  }
+
   // Limpiar el carrito
   const clearCart = () => {
     setCart([]);
   };
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart, total }}>
       {children}
     </CartContext.Provider>
   );

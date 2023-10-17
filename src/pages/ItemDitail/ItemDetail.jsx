@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { collection, getDocs, getFirestore } from "firebase/firestore"
 import style from "./ItemDetail.module.css"
 import Loader from "../../components/Loader/Loader";
-import Button from "../../components/Button.jsx/Button";
+import Button from "../../components/Button/Button";
 import { useCart } from "../../context/CartContext";
 
 export default function ItemDitail() {
@@ -18,7 +18,7 @@ export default function ItemDitail() {
     }
 
     const resta = () => {
-        setCont(cont > 0 ? cont-1 : cont = 0)
+        setCont(cont > 1 ? cont-1 : cont = 1)
     }
     
     useEffect(() => {
@@ -77,7 +77,7 @@ export default function ItemDitail() {
                             <h1>{product.title}</h1>
                             <p>{product.description}</p>
                             <section className={style.addToCart}>
-                                <Button funcion={() => addToCart(product, cont)} content={"Agregar al carrito"} />
+                                <Button clase="w-50" funcion={() => addToCart(product, cont)} content={"Agregar al carrito"} />
                                 <div className="col-6">
                                     <button onClick={resta} className="btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-dash" viewBox="0 0 16 16">
                                         <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>

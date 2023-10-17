@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer"
 import { CartProvider } from './context/CartContext.jsx';
 import { ModalProvider } from "./context/ModalContex"
 import CartDetail from "./components/CartDetail/CartDetail"
+import { OrderProvider } from "./context/OrderContex"
 
 function App() {
 
@@ -14,13 +15,15 @@ function App() {
     <CartProvider>
       <ModalProvider>
         <NavBar />
-        <CartDetail/>
-        <Routes>
-          <Route path='/' element={<ItemListContainer/>}/>
-          <Route path='/category/:id' element={<ItemListContainer />}/>
-          <Route path='/item/:id' element={<ItemDitail />} />
-          <Route path='*' element={<Error404 />} />
-        </Routes>
+          <OrderProvider>
+            <CartDetail />
+            <Routes>
+            <Route path='/' element={<ItemListContainer/>}/>
+            <Route path='/category/:id' element={<ItemListContainer />}/>
+            <Route path='/item/:id' element={<ItemDitail />} />
+            <Route path='*' element={<Error404 />} />
+            </Routes>
+          </OrderProvider>
         <Footer />
         </ModalProvider>
     </CartProvider>
