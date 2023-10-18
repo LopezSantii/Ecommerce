@@ -4,16 +4,14 @@ import Button from "../Button/Button";
 import { useModal } from "../../context/ModalContex"
 import { useCart } from "../../context/CartContext";
 import { useOrder } from "../../context/OrderContex";
-import { useState } from "react";
 
 function CartDetail() {
 
-  const [compra,setCompra] = useState(true)
   // se usa el context para poder abrir el modal en cualquier page
   const {isModalOpen, closeModal} = useModal()
   const handleClose = () => closeModal();
-  const { cart, removeFromCart, total } = useCart()  
-  const { handleSubmit, Order} = useOrder()
+  const { cart, removeFromCart, total,updateCartItem } = useCart()  
+  const { handleSubmit, Order,siguiente,compra} = useOrder()
 
   return (
     <>
@@ -26,7 +24,7 @@ function CartDetail() {
                     {
                       compra ?
                       cart.map((cart) => (
-                      <CartItem removeFromCart={removeFromCart} products={cart} key={cart.id} />
+                      <CartItem updateCartItem={updateCartItem} removeFromCart={removeFromCart} products={cart} key={cart.id} />
                       ))
                       : <Order />
                     }
@@ -35,10 +33,11 @@ function CartDetail() {
         <Modal.Footer>
           <p className={compra ? "m-auto" : "d-none"}> Total $ {total()}</p>
           <Button
+            disabled={cart.length === 0}
             clase={compra ? "w-50" : "w-100 mx-2"}
             content={
               compra ? "Comprar" : "Terminar pedido"}
-            funcion={compra ? () => setCompra(!compra) : () => handleSubmit()} />
+            funcion={compra ? siguiente : handleSubmit} />
         </Modal.Footer>
       </Modal>
     </>

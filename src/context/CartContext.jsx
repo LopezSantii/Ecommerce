@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
+import { useModal } from "./ModalContex";
 import Toastify from 'toastify-js'
 import "toastify-js/src/toastify.css"
 
@@ -7,6 +8,7 @@ const CartContext = createContext();
 
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
+  const {closeModal} = useModal()
 
   // Agregar un producto al carrito
   const addToCart = (product, quantity) => {
@@ -46,19 +48,19 @@ export function CartProvider({ children }) {
   const removeFromCart = (productId) => {
     const updatedCart = cart.filter((product) => product.id !== productId);
     setCart(updatedCart);
-
-        Toastify({
-        text: "Producto eliminado",
-        duration: 800,
-        newWindow: true,
-        close: true,
-        gravity: "top",
-        position: "right",
-        stopOnFocus: true,
-        style: {
-          background: "black",
-        },
-      }).showToast();
+    updatedCart.length === 0 ? closeModal() : ""
+    Toastify({
+      text: "Producto eliminado",
+      duration: 800,
+      newWindow: true,
+      close: true,
+      gravity: "top",
+      position: "right",
+      stopOnFocus: true,
+      style: {
+        background: "black",
+      },
+    }).showToast();
   };
 
   // Precio total del carrito
@@ -66,13 +68,27 @@ export function CartProvider({ children }) {
     return cart.reduce((acc, item) => acc + (item.quantity * item.price), 0)
   }
 
+    // Actualizar la cantidad de un producto en el carrito
+  const updateCartItem = (productId, newQuantity) => {
+    const updatedCart = cart.map((item) => {
+      if (item.id === productId) {
+        return {
+          ...item,
+          quantity: newQuantity,
+        };
+      }
+      return item;
+    });
+    setCart(updatedCart);
+  };
+
   // Limpiar el carrito
   const clearCart = () => {
     setCart([]);
   };
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart, total }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart, total, updateCartItem}}>
       {children}
     </CartContext.Provider>
   );

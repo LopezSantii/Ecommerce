@@ -1,6 +1,8 @@
 import styles from "./CartWidget.module.css"
 import { useCart } from "../../context/CartContext"
 import { useModal } from "../../context/ModalContex";
+import Toastify from 'toastify-js'
+import "toastify-js/src/toastify.css"
 
 export default function CartWidget() {
   const { cart } = useCart();
@@ -13,7 +15,22 @@ export default function CartWidget() {
   const { openModal } = useModal();
 
   return (
-    <button onClick={openModal}>
+    <button onClick={cart.length === 0
+      ? () => {
+        Toastify({
+        text: "El carrito esta vacio",
+        duration: 800,
+        newWindow: true,
+        close: true,
+        gravity: "top",
+        position: "right",
+        stopOnFocus: true,
+        style: {
+          background: "black",
+        },
+    }).showToast();
+      }
+      : openModal}>
       <svg
       xmlns="http://www.w3.org/2000/svg"
       width="25px"

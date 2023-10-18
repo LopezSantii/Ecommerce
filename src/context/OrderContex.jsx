@@ -3,6 +3,8 @@ import { createContext, useContext, useState } from 'react';
 import { serverTimestamp } from "firebase/firestore";
 import { useCart } from "./CartContext";
 import { mapCartToOrder } from "../utils";
+import Swal from "sweetalert2";
+import { useModal } from "./ModalContex";
 
 const OrderContext = createContext();
 
@@ -11,7 +13,13 @@ export function useOrder() {
 }
 
 export function OrderProvider({ children }) {
-  const {total,cart} = useCart()
+  const [compra, setCompra] = useState(true)
+  const {closeModal} = useModal() 
+  const { total, cart, clearCart } = useCart()
+  
+  const siguiente = () => {
+    setCompra(false)
+  }
 
   const [formData, setFormData] = useState({
     name: '',
@@ -28,15 +36,38 @@ export function OrderProvider({ children }) {
   };
   
     
-  const handleSubmit = () => {
-    const ordenSet = {
-    buyer: formData,
-    items: mapCartToOrder(cart),
-    total : total(),
-    date : serverTimestamp(),
+    const handleSubmit = () => {
+      const ordenSet = {
+      buyer: formData,
+      items: mapCartToOrder(cart),
+      total : total(),
+      date : serverTimestamp(),
+      }
+      closeModal();
+      createOrder(ordenSet)
+        .then((docRef) => {
+          Swal.fire({
+            title: "Compra exitosa",
+            icon: "success",
+            text: `Tu id de compra es ${docRef.id}`,
+            confirmButton: "Aceptar",
+          });
+        })
+        .catch(() => {
+          Swal.fire({
+            title: "Oops...",
+            icon: "error",
+            text: `Parece que algo salio mal, vuelve a intentar en unos minutos`,
+            confirmButton: "Aceptar",
+          });
+        })
+        .finally(() => {
+          clearCart()
+          setCompra(true)
+        })
     }
-    createOrder(ordenSet);
-  };
+    
+  
 
   const Order = () => {
     return (
@@ -67,12 +98,12 @@ export function OrderProvider({ children }) {
         />
       </div>
     );
-};
+  };
 
   return (
-    <OrderContext.Provider value={{ formData, handleInputChange, handleSubmit, Order}}>
+    <OrderContext.Provider value={{ formData, handleInputChange, handleSubmit, Order, siguiente,compra}}>
       {children}
     </OrderContext.Provider>
   );
-}
+};
 

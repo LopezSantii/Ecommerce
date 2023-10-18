@@ -12,8 +12,9 @@ import { OrderProvider } from "./context/OrderContex"
 function App() {
 
   return (
-    <CartProvider>
-      <ModalProvider>
+    
+    <ModalProvider>
+      <CartProvider>
         <NavBar />
           <OrderProvider>
             <CartDetail />
@@ -25,8 +26,9 @@ function App() {
             </Routes>
           </OrderProvider>
         <Footer />
-        </ModalProvider>
-    </CartProvider>
+      </CartProvider>
+    </ModalProvider>
+    
   )
 }
 
