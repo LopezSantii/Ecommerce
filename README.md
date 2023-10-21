@@ -1,9 +1,9 @@
 # Ecommerce
 
-##Desripcion
+## Desripcion
 La aplicacion es un Ecommerce de sneakers el cual se conecta a una base de datos (en este caso es Firebase) desde ahi traemos toda la informacion de los productos y ademas le pusheamos las ordenes de compra
 
-##Como correr el proyecto
+## Como correr el proyecto
 Para correr correctamente el proyecto debes ejecutar los siguientes comandos
 ```
 npm install
