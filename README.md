@@ -35,3 +35,7 @@ Para mejorar la experiencia de usuario use dos librerias de notificaciones que l
 
  ![image](https://github.com/LopezSantii/Ecommerce/assets/105465529/1ea60224-9d21-4632-b8d9-a197d5250785)
  ![image](https://github.com/LopezSantii/carritoDeCompras/assets/105465529/3b93ea25-ea69-4b30-b9bd-83a26a981124) 
+ ![image](https://github.com/LopezSantii/Ecommerce/assets/105465529/b174858b-7c5b-4aba-8299-93003492b158)
+ ![image](https://github.com/LopezSantii/Ecommerce/assets/105465529/c2e2da31-6951-4260-a3f7-fe9bf1d224a8)
+
+
