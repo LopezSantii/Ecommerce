@@ -1,8 +1,26 @@
-# React + Vite
+# Ecommerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##Desripcion
+La aplicacion es un Ecommerce de sneakers el cual se conecta a una base de datos (en este caso es Firebase) desde ahi traemos toda la informacion de los productos y ademas le pusheamos las ordenes de compra
 
-Currently, two official plugins are available:
+##Como correr el proyecto
+Para correr correctamente el proyecto debes ejecutar los siguientes comandos
+```
+npm install
+npm start
+npm install bootstrap
+npm install react-bootstrap bootstrap
+npm install sweetalert2
+npm install --save toastify-js
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Componentes principales
+### Navbar
+En el Navbar se alojan los links asi las categorias de los producos como tambien el Cart que es otro componente importante del proyecto
+![image](https://github.com/LopezSantii/Ecommerce/assets/105465529/2e085530-f980-4a62-835d-5cfb9592acc3)
+
+### CartWidget
+
+
+
+![image](https://github.com/LopezSantii/carritoDeCompras/assets/105465529/5739cd24-9152-4999-a097-ecd887f2c3cc)
