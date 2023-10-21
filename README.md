@@ -24,7 +24,7 @@ Es un modal que se despliega al precionar en el boton, solo se abre si hay produ
 ![image](https://github.com/LopezSantii/Ecommerce/assets/105465529/3b22f152-221d-422f-b566-fa02a1e26dbb)
 
 <br>Al darle comprar se despliega el form para realizar la compra
-![image](https://github.com/LopezSantii/Ecommerce/assets/105465529/fe37d9bf-7f16-4052-bd91-39a2a31dbacb)
+<br>![image](https://github.com/LopezSantii/Ecommerce/assets/105465529/fe37d9bf-7f16-4052-bd91-39a2a31dbacb)
 
 ###ItemContainer
 Es el contenedor de todos los productos del ecommerce
