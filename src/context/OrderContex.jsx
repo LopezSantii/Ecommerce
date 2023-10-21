@@ -22,16 +22,15 @@ export function OrderProvider({ children }) {
   }
 
   const [formData, setFormData] = useState({
-    name: '',
+    nombre: '',
     email: '',
     telefono: '',
   });
 
   const handleInputChange = (event) => {
-    const { name, value } = event.target;
     setFormData({
       ...formData,
-      [name]: value,
+      [event.target.name]: event.target.value,
     });
   };
   
@@ -75,25 +74,19 @@ export function OrderProvider({ children }) {
         <label>Nombre</label>
         <input
           className="mb-3 col-12"
-          type="text"
-          name="name"
-          value={formData.name}
+          name="nombre"
           onChange={handleInputChange}
         />
-        <label>Correo electrónico</label>
+        <label>Email</label>
         <input
           className="mb-3"
-          type="email"
           name="email"
-          value={formData.email}
           onChange={handleInputChange}
         />
         <label>Telefono</label>
         <input
           className="mb-3"
-          type="text"
           name="telefono"
-          value={formData.telefono}
           onChange={handleInputChange}
         />
       </div>

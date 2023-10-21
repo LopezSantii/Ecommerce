@@ -33,7 +33,6 @@ function CartDetail() {
         <Modal.Footer>
           <p className={compra ? "m-auto" : "d-none"}> Total $ {total()}</p>
           <Button
-            disabled={cart.length === 0}
             clase={compra ? "w-50" : "w-100 mx-2"}
             content={
               compra ? "Comprar" : "Terminar pedido"}
