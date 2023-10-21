@@ -29,3 +29,9 @@ Es un modal que se despliega al precionar en el boton, solo se abre si hay produ
 ### ItemContainer
 Es el contenedor de todos los productos del ecommerce
 ![image](https://github.com/LopezSantii/carritoDeCompras/assets/105465529/5739cd24-9152-4999-a097-ecd887f2c3cc)
+
+## Experiencia de usuario
+Para mejorar la experiencia de usuario use dos librerias de notificaciones que le permiten al usuario saber que esta pasando
+
+ ![image](https://github.com/LopezSantii/Ecommerce/assets/105465529/1ea60224-9d21-4632-b8d9-a197d5250785)
+ ![image](https://github.com/LopezSantii/carritoDeCompras/assets/105465529/3b93ea25-ea69-4b30-b9bd-83a26a981124) 
