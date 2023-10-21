@@ -14,12 +14,12 @@ npm install sweetalert2
 npm install --save toastify-js
 ```
 
-##Componentes principales
-###Navbar
+## Componentes principales
+### Navbar
 En el Navbar se alojan los links asi las categorias de los producos como tambien el Cart que es otro componente importante del proyecto
 ![image](https://github.com/LopezSantii/Ecommerce/assets/105465529/2e085530-f980-4a62-835d-5cfb9592acc3)
 
-###CartWidget
+### CartWidget
 
 
 
