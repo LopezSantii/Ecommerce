@@ -35,6 +35,7 @@ Para correr correctamente el proyecto debes ejecutar los siguientes comandos
 npm install
 npm start
 npm install react-router-dom
+npm install firebase
 npm install react-bootstrap bootstrap
 npm install sweetalert2
 npm install toastify-js
