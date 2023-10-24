@@ -13,6 +13,15 @@ La aplicacion es una aplicación web diseñada para ofrecer una experiencia de c
 - Integración con Firebase para almacenar y recuperar información de productos y gestionar las órdenes de compra.
 
 
+## Demo de navegacion
+Aqui hay una demo de la navegacion del sitio, la misma esta hecha con React Router
+
+
+
+
+https://github.com/LopezSantii/Ecommerce/assets/105465529/f79961f5-655f-4377-b022-3cfaf6b17f63
+
+
 ## lenguajes y tecnologias
 #### Lenguajes
 - Jsx
@@ -68,14 +77,6 @@ Para mejorar la experiencia de usuario use dos librerias de notificaciones que l
 ![image](https://github.com/LopezSantii/carritoDeCompras/assets/105465529/3b93ea25-ea69-4b30-b9bd-83a26a981124) 
 ![image](https://github.com/LopezSantii/Ecommerce/assets/105465529/b174858b-7c5b-4aba-8299-93003492b158)
 ![image](https://github.com/LopezSantii/Ecommerce/assets/105465529/c2e2da31-6951-4260-a3f7-fe9bf1d224a8)
-
-## Demo de navegacion
-Aqui hay una demo de la navegacion del sitio, la misma esta hecha con React Router
-
-
-
-
-https://github.com/LopezSantii/Ecommerce/assets/105465529/f79961f5-655f-4377-b022-3cfaf6b17f63
 
 
 ### Gracias por llegar hasta aqui espero que les haya gustado ❤
