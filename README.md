@@ -50,3 +50,6 @@ Aqui hay una demo de la navegacion del sitio
 
 https://github.com/LopezSantii/Ecommerce/assets/105465529/f79961f5-655f-4377-b022-3cfaf6b17f63
 
+
+### Gracias por llegar hasta aqui espero que les haya gustado ❤
+Les dejo mi LinkedIn: https://www.linkedin.com/in/santiago-lopez-3962a4234/
