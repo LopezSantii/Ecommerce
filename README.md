@@ -37,10 +37,14 @@ Muestra el detalle del producto al hacerle click en el item container
 
 ## Experiencia de usuario
 Para mejorar la experiencia de usuario use dos librerias de notificaciones que le permiten al usuario saber que esta pasando
+![image](https://github.com/LopezSantii/Ecommerce/assets/105465529/1ea60224-9d21-4632-b8d9-a197d5250785)
+![image](https://github.com/LopezSantii/carritoDeCompras/assets/105465529/3b93ea25-ea69-4b30-b9bd-83a26a981124) 
+![image](https://github.com/LopezSantii/Ecommerce/assets/105465529/b174858b-7c5b-4aba-8299-93003492b158)
+![image](https://github.com/LopezSantii/Ecommerce/assets/105465529/c2e2da31-6951-4260-a3f7-fe9bf1d224a8)
 
- ![image](https://github.com/LopezSantii/Ecommerce/assets/105465529/1ea60224-9d21-4632-b8d9-a197d5250785)
- ![image](https://github.com/LopezSantii/carritoDeCompras/assets/105465529/3b93ea25-ea69-4b30-b9bd-83a26a981124) 
- ![image](https://github.com/LopezSantii/Ecommerce/assets/105465529/b174858b-7c5b-4aba-8299-93003492b158)
- ![image](https://github.com/LopezSantii/Ecommerce/assets/105465529/c2e2da31-6951-4260-a3f7-fe9bf1d224a8)
+## Demo
+Aqui hay una demo de la navegacion del sitio
+https://github.com/LopezSantii/Ecommerce/assets/105465529/9bc260cb-70dc-4fc3-aa51-5bbdc4706dcf
+
 
 
