@@ -1,7 +1,7 @@
 # Ecommerce
 
 ## Desripcion
-La aplicacion es un Ecommerce de sneakers el cual se conecta a una base de datos (en este caso es Firebase) desde ahi traemos toda la informacion de los productos y ademas le pusheamos las ordenes de compra
+La aplicacion es una aplicación web diseñada para ofrecer una experiencia de compra de zapatillas en línea. La aplicación se conecta a una base de datos en tiempo real (Firebase) para gestionar y mostrar información sobre los productos disponibles. Además, permite a los usuarios realizar pedidos y gestionar sus compras.
 
 ## lenguajes y tecnologias
 #### Lenguajes
