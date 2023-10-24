@@ -65,7 +65,7 @@ En el Navbar se alojan los links asi las categorias de los producos como tambien
 ![image](https://github.com/LopezSantii/Ecommerce/assets/105465529/2e085530-f980-4a62-835d-5cfb9592acc3)
 
 ### CartWidget
-Es un modal que se despliega al precionar en el boton, solo se abre si hay productos en el carrito
+Es un modal que se despliega al precionar el boton, solo se abre si hay productos en el carrito
 ![image](https://github.com/LopezSantii/Ecommerce/assets/105465529/3b22f152-221d-422f-b566-fa02a1e26dbb)
 
 <br>Al darle comprar se despliega el form para realizar la compra
