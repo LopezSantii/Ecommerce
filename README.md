@@ -3,6 +3,21 @@
 ## Desripcion
 La aplicacion es un Ecommerce de sneakers el cual se conecta a una base de datos (en este caso es Firebase) desde ahi traemos toda la informacion de los productos y ademas le pusheamos las ordenes de compra
 
+## lenguajes y tecnologias
+#### Lenguajes
+- Jsx
+- Js
+- Css
+#### Frameworks y Librerias
+- React
+- Node.js
+- Boostrap
+- Toastify
+- Sweetalert2
+#### Sistemas de control de versiones
+- Git
+- GitHub
+
 ## Como correr el proyecto
 Para correr correctamente el proyecto debes ejecutar los siguientes comandos
 ```
