@@ -23,10 +23,10 @@ Para correr correctamente el proyecto debes ejecutar los siguientes comandos
 ```
 npm install
 npm start
-npm install bootstrap
+npm install react-router-dom
 npm install react-bootstrap bootstrap
 npm install sweetalert2
-npm install --save toastify-js
+npm install toastify-js
 ```
 
 ## Componentes principales
@@ -57,8 +57,8 @@ Para mejorar la experiencia de usuario use dos librerias de notificaciones que l
 ![image](https://github.com/LopezSantii/Ecommerce/assets/105465529/b174858b-7c5b-4aba-8299-93003492b158)
 ![image](https://github.com/LopezSantii/Ecommerce/assets/105465529/c2e2da31-6951-4260-a3f7-fe9bf1d224a8)
 
-## Demo
-Aqui hay una demo de la navegacion del sitio
+## Demo de navegacion
+Aqui hay una demo de la navegacion del sitio la misma esta hecha con React Router
 
 
 
