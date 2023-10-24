@@ -4,13 +4,13 @@
 La aplicacion es una aplicación web diseñada para ofrecer una experiencia de compra de zapatillas en línea. La aplicación se conecta a una base de datos en tiempo real (Firebase) para gestionar y mostrar información sobre los productos disponibles. Además, permite a los usuarios realizar pedidos y gestionar sus compras.
 
 ## Características Clave
--Amplia selección de zapatillas de diferentes marcas, estilos y tallas.
--Conexión en tiempo real con Firebase para mantener actualizada la información de los productos.
--Capacidades de búsqueda y filtrado para facilitar la navegación de productos.
--Carrito de compras que permite a los usuarios agregar, editar y eliminar productos.
--Proceso de pago seguro y opciones de envío personalizadas.
--Registro de pedidos y seguimiento del estado de las compras.
--Integración con Firebase para almacenar y recuperar información de productos y gestionar las órdenes de compra.
+- Amplia selección de zapatillas de diferentes marcas, estilos y tallas.
+- Conexión en tiempo real con Firebase para mantener actualizada la información de los productos.
+- Capacidades de búsqueda y filtrado para facilitar la navegación de productos.
+- Carrito de compras que permite a los usuarios agregar, editar y eliminar productos.
+- Proceso de pago seguro y opciones de envío personalizadas.
+- Registro de pedidos y seguimiento del estado de las compras.
+- Integración con Firebase para almacenar y recuperar información de productos y gestionar las órdenes de compra.
 Esta aplicación proporciona a los usuarios una experiencia de compra en línea completa y atractiva, asegurando la seguridad de los datos y la eficiencia en la gestión de productos y pedidos.
 
 ## lenguajes y tecnologias
