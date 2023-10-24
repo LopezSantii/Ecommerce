@@ -13,7 +13,7 @@ La aplicacion es una aplicación web diseñada para ofrecer una experiencia de c
 - Integración con Firebase para almacenar y recuperar información de productos y gestionar las órdenes de compra.
 
 
-## Demo de navegacion
+## Navegacion
 Aqui hay una demo de la navegacion del sitio, la misma esta hecha con React Router
 
 
