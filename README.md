@@ -47,4 +47,3 @@ Aqui hay una demo de la navegacion del sitio
 https://github.com/LopezSantii/Ecommerce/assets/105465529/9bc260cb-70dc-4fc3-aa51-5bbdc4706dcf
 
 
-
