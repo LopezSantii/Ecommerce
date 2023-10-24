@@ -50,7 +50,6 @@ npm install sweetalert2
 npm install toastify-js
 ```
 Recuerda tener seteadas las variables de entorno en el archivo `.env` para el correcto funcionamiento de la base de datos.
-<br>Las variables son:
 ```
 VITE_FIRESTORE_API_KEY
 VITE_FIRESTORE_AUTH_DOMAIN
