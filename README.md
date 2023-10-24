@@ -44,11 +44,9 @@ Para mejorar la experiencia de usuario use dos librerias de notificaciones que l
 
 ## Demo
 Aqui hay una demo de la navegacion del sitio
-https://github.com/LopezSantii/Ecommerce/assets/105465529/51badc63-95a0-4145-9497-29b85f190fd5
 
 
 
 
-https://github.com/LopezSantii/Ecommerce/assets/105465529/897aa6e1-0d05-4f17-a820-86f13748f84a
-
+https://github.com/LopezSantii/Ecommerce/assets/105465529/f79961f5-655f-4377-b022-3cfaf6b17f63
 
