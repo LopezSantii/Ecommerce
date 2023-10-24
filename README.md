@@ -39,7 +39,7 @@ https://github.com/LopezSantii/Ecommerce/assets/105465529/f79961f5-655f-4377-b02
 - GitHub
 
 ## Como correr el proyecto
-Para el correctamente funcionamiento del proyecto debes ejecutar los siguientes comandos
+Para el correctamente funcionamiento del proyecto debes ejecutar los siguientes comandos:
 ```
 npm install
 npm start
@@ -49,7 +49,8 @@ npm install react-bootstrap bootstrap
 npm install sweetalert2
 npm install toastify-js
 ```
-Recuerda tener seteadas las variables de entorno en el archivo `.env` para el correcto funcionamiento de la base de datos. Las variables son:
+Recuerda tener seteadas las variables de entorno en el archivo `.env` para el correcto funcionamiento de la base de datos.
+<br>Las variables son:
 ```
 VITE_FIRESTORE_API_KEY
 VITE_FIRESTORE_AUTH_DOMAIN
