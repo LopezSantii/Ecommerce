@@ -70,7 +70,7 @@ Para mejorar la experiencia de usuario use dos librerias de notificaciones que l
 ![image](https://github.com/LopezSantii/Ecommerce/assets/105465529/c2e2da31-6951-4260-a3f7-fe9bf1d224a8)
 
 ## Demo de navegacion
-Aqui hay una demo de la navegacion del sitio la misma esta hecha con React Router
+Aqui hay una demo de la navegacion del sitio, la misma esta hecha con React Router
 
 
 
