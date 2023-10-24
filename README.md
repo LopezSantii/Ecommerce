@@ -11,7 +11,7 @@ La aplicacion es una aplicación web diseñada para ofrecer una experiencia de c
 - Proceso de pago seguro y opciones de envío personalizadas.
 - Registro de pedidos y seguimiento del estado de las compras.
 - Integración con Firebase para almacenar y recuperar información de productos y gestionar las órdenes de compra.
-Esta aplicación proporciona a los usuarios una experiencia de compra en línea completa y atractiva, asegurando la seguridad de los datos y la eficiencia en la gestión de productos y pedidos.
+
 
 ## lenguajes y tecnologias
 #### Lenguajes
