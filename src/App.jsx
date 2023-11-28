@@ -18,7 +18,7 @@ function App() {
         <NavBar />
         <div className="container mt-4">
           <img className="img-fluid d-none d-md-block" src="./img/baner.webp" alt="banner" />
-          <img className="img-fluid d-block d-md-none" src="./img/banerMobile.webp" alt="banner mobile" />
+          <img className="img-fluid d-block d-md-none w-100" src="./img/banerMobile.webp" alt="banner mobile" />
         </div>
           <OrderProvider>
             <CartDetail />
