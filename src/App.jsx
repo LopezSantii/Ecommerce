@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom"
-import NavBar from "./components/Navbar/NavBar.jsx"
+import NavBar from "./components/Navbar/NavBar"
 import ItemListContainer from "./pages/ItemListContainer/ItemListContainer"
 import ItemDitail from './pages/ItemDitail/ItemDetail'
 import Error404 from './pages/Error404/Error404'
