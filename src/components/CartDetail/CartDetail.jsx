@@ -4,6 +4,7 @@ import Button from "../Button/Button";
 import { useModal } from "../../context/ModalContex"
 import { useCart } from "../../context/CartContext";
 import { useOrder } from "../../context/OrderContex";
+import { Form } from '../Form/Form';
 
 function CartDetail() {
 
@@ -11,7 +12,7 @@ function CartDetail() {
   const {isModalOpen, closeModal} = useModal()
   const handleClose = () => closeModal();
   const { cart, removeFromCart, total,updateCartItem } = useCart()  
-  const { handleSubmit, Order,siguiente,compra} = useOrder()
+  const { handleSubmit,siguiente,compra} = useOrder()
 
   return (
     <>
@@ -26,7 +27,7 @@ function CartDetail() {
                       cart.map((cart) => (
                       <CartItem updateCartItem={updateCartItem} removeFromCart={removeFromCart} products={cart} key={cart.id} />
                       ))
-                      : <Order />
+                      : <Form />
                     }
                   </section>
               </Modal.Body>

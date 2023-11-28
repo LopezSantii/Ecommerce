@@ -6,3 +6,8 @@ export const mapCartToOrder = (cart) => {
         price : item.price
     }))
 }
+
+export const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+export const tieneMayuscula = /[A-Z]/;
+export const tieneMinuscula = /[a-z]/;
+export const tieneNumero = /\d/;

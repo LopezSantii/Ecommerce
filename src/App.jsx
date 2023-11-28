@@ -16,6 +16,10 @@ function App() {
     <ModalProvider>
       <CartProvider>
         <NavBar />
+        <div className="container mt-4">
+          <img className="img-fluid d-none d-md-block" src="./img/baner.webp" alt="banner" />
+          <img className="img-fluid d-block d-md-none" src="./img/banerMobile.webp" alt="banner mobile" />
+        </div>
           <OrderProvider>
             <CartDetail />
             <Routes>

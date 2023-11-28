@@ -5,6 +5,7 @@ import { useCart } from "./CartContext";
 import { mapCartToOrder } from "../utils";
 import Swal from "sweetalert2";
 import { useModal } from "./ModalContex";
+import { regex } from "../utils";
 
 const OrderContext = createContext();
 
@@ -22,79 +23,66 @@ export function OrderProvider({ children }) {
   }
 
   const [formData, setFormData] = useState({
-    nombre: '',
-    email: '',
-    telefono: '',
+    nombre: "",
+    email: "",
+    telefono: ""
   });
 
-  const handleInputChange = (event) => {
-    setFormData({
-      ...formData,
-      [event.target.name]: event.target.value,
-    });
-  };
-  
-    
-    const handleSubmit = () => {
+  const [errors, setErrors] = useState({});
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Aquí puedes realizar las validaciones antes de enviar el formulario
+    const validationErrors = {};
+
+    if (formData.nombre.trim() === '') {
+      validationErrors.nombre = 'Por favor, ingresa tu nombre correctamente';
+    }
+
+    if (!regex.test(formData.email)) {
+      validationErrors.email = 'Por favor, ingresa tu correo electrónico correctamente';
+    }
+
+    if (Object.keys(validationErrors).length > 0) {
+      // Si hay errores, actualiza el estado de los errores y detén el envío del formulario
+      setErrors(validationErrors);
+    } else {
       const ordenSet = {
       buyer: formData,
       items: mapCartToOrder(cart),
       total : total(),
       date : serverTimestamp(),
-      }
+    }
       closeModal();
       createOrder(ordenSet)
-        .then((docRef) => {
-          Swal.fire({
-            title: "Compra exitosa",
-            icon: "success",
-            text: `Tu id de compra es ${docRef.id}`,
-            confirmButton: "Aceptar",
-          });
-        })
-        .catch(() => {
-          Swal.fire({
-            title: "Oops...",
-            icon: "error",
-            text: `Parece que algo salio mal, vuelve a intentar en unos minutos`,
-            confirmButton: "Aceptar",
-          });
-        })
-        .finally(() => {
-          clearCart()
-          setCompra(true)
-        })
+      .then((docRef) => {
+        Swal.fire({
+          title: "Compra exitosa",
+          icon: "success",
+          text: `Tu id de compra es ${docRef.id}`,
+          confirmButton: "Aceptar",
+        });
+      })
+      .catch(() => {
+            Swal.fire({
+              title: "Oops...",
+              icon: "error",
+              text: `Parece que algo salio mal, vuelve a intentar en unos minutos`,
+              confirmButton: "Aceptar",
+            });
+          })
+          .finally(() => {
+            clearCart()
+            setCompra(true)
+          })
+      console.log('Datos del formulario:', ordenSet);
     }
-    
-  
 
-  const Order = () => {
-    return (
-      <div className="row mx-2">
-        <label>Nombre</label>
-        <input
-          className="mb-3 col-12"
-          name="nombre"
-          onChange={handleInputChange}
-        />
-        <label>Email</label>
-        <input
-          className="mb-3"
-          name="email"
-          onChange={handleInputChange}
-        />
-        <label>Telefono</label>
-        <input
-          className="mb-3"
-          name="telefono"
-          onChange={handleInputChange}
-        />
-      </div>
-    );
+    
   };
 
   return (
-    <OrderContext.Provider value={{ formData, handleInputChange, handleSubmit, Order, siguiente,compra}}>
+    <OrderContext.Provider value={{ formData,errors,setFormData, handleSubmit, siguiente,compra}}>
       {children}
     </OrderContext.Provider>
   );
