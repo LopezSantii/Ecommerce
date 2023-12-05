@@ -5,6 +5,7 @@ import { collection, getDocs, getFirestore } from "firebase/firestore"
 import Loader from "../../components/Loader/Loader";
 import { useCart } from "../../context/CartContext";
 
+
 export default function ItemListContainer() {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true)
@@ -34,6 +35,10 @@ export default function ItemListContainer() {
             </main>
             ) :
             (<main>
+                <div className="container mt-4">
+                    <img className="img-fluid d-none d-md-block" src="src/img/baner.webp" alt="banner" />
+                    <img className="img-fluid d-block d-md-none w-100" src="src/img/banerMobile.webp" alt="banner mobile" />
+                </div>
                 <h1 className="mt-5 text-center py-4">ÚLTIMOS LANZAMIENTOS</h1>
                 <section className="container row mx-auto">
                 {products.map((product) => (
