@@ -38,11 +38,11 @@ export default function ItemDitail() {
     
     return (
         loading ?
-            (<main className="col-md-12 d-flex align-items-center justify-content-center">
+            (<section className="col-md-12 d-flex align-items-center justify-content-center">
                 <Loader/>
-            </main>)
+            </section>)
             : (product && (
-                <main className={`container-fluid ${style.bg_snk}`}>
+                <section className={`container-fluid ${style.bg_snk}`}>
                     {/* Carousel Mobile */}
                     <div id="carouselExample" className="d-block d-lg-none carousel slide carousel-dark">
                     <div className="carousel-inner">
@@ -100,7 +100,7 @@ export default function ItemDitail() {
                         <img className="d-block d-lg-none img-fluid" src={product.imgCarrousel5} alt="jordan low"/>
                     </div>
                     </section>
-                </main>
+                </section>
             )) 
     )
     }
