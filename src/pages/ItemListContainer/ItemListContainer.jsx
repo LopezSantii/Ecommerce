@@ -36,8 +36,8 @@ export default function ItemListContainer() {
             ) :
             (<main>
                 <div className="container mt-4">
-                    <img className="img-fluid d-none d-md-block" src="../img/baner.webp" alt="banner" />
-                    <img className="img-fluid d-block d-md-none w-100" src="../img/banerMobile.webp" alt="banner mobile" />
+                    <img className="img-fluid d-none d-md-block" src="img/baner.webp" alt="banner" />
+                    <img className="img-fluid d-block d-md-none w-100" src="../../img/banerMobile.webp" alt="banner mobile" />
                 </div>
                 <h1 className="mt-5 text-center py-4">ÚLTIMOS LANZAMIENTOS</h1>
                 <section className="container row mx-auto">
