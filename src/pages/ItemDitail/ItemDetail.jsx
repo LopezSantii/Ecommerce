@@ -93,7 +93,7 @@ export default function ItemDitail() {
                         </article>
                     </div>
                     <div className="row">
-                        <img className="d-none d-lg-block col-md-4 img-fluid" src={`../src/${product.img3}`} alt="jordan low vuelta"/>
+                        <img className="d-none d-lg-block col-md-4 img-fluid" src={`../${product.img3}`} alt="jordan low vuelta"/>
                         <img className="d-none d-lg-block col-md-4 img-fluid" src={`../src/${product.img4}`} alt="jordan low arriba"/>
                         <img className="d-none d-lg-block col-md-4 img-fluid" src={`../src/${product.img5}`} alt="jordan low atras"/>
                         <img className="d-none d-lg-block img-fluid" src={`../src/${product.img6}`} alt="baner jordan low"/>
