@@ -12,7 +12,7 @@ export default function CartItem({ products, removeFromCart, updateCartItem }) {
 
     return (
         <section className={style.itemCarrito}>
-            <img className="img-fluid" src={`/src/${products.imgCard}`} alt={products.title}/>
+            <img className="img-fluid" src={`/${products.imgCard}`} alt={products.title}/>
             <section>
                 <h3 className="col-6">{products.title}</h3>
                 <div className="col-6">
