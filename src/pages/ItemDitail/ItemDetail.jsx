@@ -47,16 +47,16 @@ export default function ItemDitail() {
                     <div id="carouselExample" className="d-block d-lg-none carousel slide carousel-dark">
                     <div className="carousel-inner">
                         <div className="carousel-item active">
-                        <img className="img-fluid d-block w-100" src={`../src/${product.imgCarrousel1}`} alt="jordan 1 low"/>
+                        <img className="img-fluid d-block w-100" src={`/src/${product.imgCarrousel1}`} alt="jordan 1 low"/>
                         </div>
                         <div className="carousel-item">
-                        <img className="img-fluid d-block w-100" src={`../src/${product.imgCarrousel2}`} alt="jordan 1 low arriba"/>
+                        <img className="img-fluid d-block w-100" src={`/src/${product.imgCarrousel2}`} alt="jordan 1 low arriba"/>
                         </div>
                         <div className=" carousel-item">
-                        <img className="img-fluid d-block w-100" src={`../src/${product.imgCarrousel3}`} alt="jordan 1 low suela"/>
+                        <img className="img-fluid d-block w-100" src={`/src/${product.imgCarrousel3}`} alt="jordan 1 low suela"/>
                         </div>
                         <div className=" carousel-item">
-                        <img className="img-fluid d-block w-100" src={`../src/${product.imgCarrousel4}`} alt="jordan 1 low atras"/>
+                        <img className="img-fluid d-block w-100" src={`/src/${product.imgCarrousel4}`} alt="jordan 1 low atras"/>
                         </div>
                     </div>
                     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -93,11 +93,11 @@ export default function ItemDitail() {
                         </article>
                     </div>
                     <div className="row">
-                        <img className="d-none d-lg-block col-md-4 img-fluid" src={`../src/${product.img3}`} alt="jordan low vuelta"/>
-                        <img className="d-none d-lg-block col-md-4 img-fluid" src={`../src/${product.img4}`} alt="jordan low arriba"/>
-                        <img className="d-none d-lg-block col-md-4 img-fluid" src={`../src/${product.img5}`} alt="jordan low atras"/>
-                        <img className="d-none d-lg-block img-fluid" src={`../src/${product.img6}`} alt="baner jordan low"/>
-                        <img className="d-block d-lg-none img-fluid" src={`../src/${product.imgCarrousel5}`} alt="jordan low"/>
+                        <img className="d-none d-lg-block col-md-4 img-fluid" src={`/src/${product.img3}`} alt="jordan low vuelta"/>
+                        <img className="d-none d-lg-block col-md-4 img-fluid" src={`/src/${product.img4}`} alt="jordan low arriba"/>
+                        <img className="d-none d-lg-block col-md-4 img-fluid" src={`/src/${product.img5}`} alt="jordan low atras"/>
+                        <img className="d-none d-lg-block img-fluid" src={`/src/${product.img6}`} alt="baner jordan low"/>
+                        <img className="d-block d-lg-none img-fluid" src={`/src/${product.imgCarrousel5}`} alt="jordan low"/>
                     </div>
                     </section>
                 </section>
